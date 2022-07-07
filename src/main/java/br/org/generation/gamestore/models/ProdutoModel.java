@@ -30,7 +30,15 @@ public class ProdutoModel {
 
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
-	private CategoriaModel categ;
+	private CategoriaModel categoria;
+
+	public CategoriaModel getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(CategoriaModel categoria) {
+		this.categoria = categoria;
+	}
 
 	public long getId() {
 		return id;
