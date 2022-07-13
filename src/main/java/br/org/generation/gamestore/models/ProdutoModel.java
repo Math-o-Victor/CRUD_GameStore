@@ -31,6 +31,10 @@ public class ProdutoModel {
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
 	private CategoriaModel categoria;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
+	private UsuarioModel usuario;
 
 	public CategoriaModel getCategoria() {
 		return categoria;
@@ -79,4 +83,13 @@ public class ProdutoModel {
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
+	
+	public UsuarioModel getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(UsuarioModel usuario) {
+		this.usuario = usuario;
+	}
+
 }
